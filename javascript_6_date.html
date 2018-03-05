@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>How javascript deal with Date.</h3>
+
+<table>
+	<tr>
+		<th>Type</th>
+		<th>Example</th>
+	</tr>
+	<tr>
+		<td>ISO Date</td>
+		<td>"2015-03-25" (The International Standard)</td>
+	</tr>
+	<tr>
+		<td>Short Date</td>
+		<td>"03/25/2015"</td>
+	</tr>
+	<tr>
+		<td>Long Date</td>
+		<td>"Mar 25 2015" or "25 Mar 2015"</td>
+	</tr>
+	<tr>
+		<td>Full Date</td>
+		<td>"Wednesday March 25 2015"</td>
+	</tr>
+</table>
+	
+
+<script type="text/javascript">
+	var d = new Date();
+	var year = d.getFullYear();
+	var month = d.getMonth() + 1;
+	var date = d.getDate();
+	var day = d.getDay();
+
+	var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+function change_date(){
+	d.setDate(8);
+	//return d;
+}
+
+var msec = Date.parse("Nov 11, 2017");
+
+var d_msec = new Date(msec);
+
+
+function compare(){
+	d_future = new Date('2018-06-19');
+	if(d_future > new Date()){
+		text = "Today is before 2018-06-19.";
+	}else{
+		text = "Today is after 2018-06-19.";
+	}
+	return text;
+}
+</script>
+
+
+<p id="demo"></p>
+
+
+<br><br><hr>
+<button type="button" onclick="document.getElementById('demo').innerHTML=new Date('2017')">new Date("2017")</button>
+
+
+<br><br><hr>
+<button type="button" onclick="document.getElementById('demo').innerHTML=new Date('2017-11')">new Date("2017-11")</button>
+
+
+<br><br><hr>
+<button type="button" onclick="document.getElementById('demo').innerHTML=new Date('Nov 15 2017')">new Date("Nov 15 2017")</button>
+
+
+<br><br><hr>
+<button type="button" onclick="document.getElementById('demo').innerHTML=year+' '+month+' '+date+' '+days[d.getDay()]">output current date</button>
+
+
+<br><br><hr>
+<button type="button" onclick="document.getElementById('demo').innerHTML=change_date()">set date to 8</button>
+
+
+<br><br><hr>
+<button type="button" onclick="document.getElementById('demo').innerHTML=d_msec">parse from string</button>
+
+
+<br><br><hr>
+<button type="button" onclick="document.getElementById('demo').innerHTML=compare()">compare dates</button>
+
+</body>
+</html>

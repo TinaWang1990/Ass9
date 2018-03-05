@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Creating an object, accessing property and using an object method.</p>
+
+<p id="demo_1"></p>
+<p id="demo_2"></p>
+<p id="demo_3"></p>
+
+<script>
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    eye		 : "blue",
+    fullName : function() {
+       return this.firstName + " " + this.lastName;
+    },
+    dosport  : function(){
+    	return this.firstName + " can do ski";
+    }
+};
+
+document.getElementById("demo_1").innerHTML = person.fullName();
+document.getElementById("demo_2").innerHTML = person.eye;
+document.getElementById("demo_3").innerHTML = person.dosport();
+</script>
+</body>
+</html>

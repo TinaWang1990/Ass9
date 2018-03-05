@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="cal"></p>
+	<script type="text/javascript">
+	
+		localStorage.countAll=0;
+	
+	document.getElementById('cal').innerHTML=localStorage.countAll;
+	function add(){
+		localStorage.countAll++;
+		document.getElementById('cal').innerHTML=localStorage.countAll;
+		// setTimeout("add()",4)
+		if (localStorage.countAll>3){
+			localStorage.countAll=-1;
+		}
+	}
+
+	</script>
+	<button onclick="add()">add</button>
+
+
+ <div id="change" style="
+ width: 200px;
+ height: 200px;
+ color: black;
+ font-size: 12px;
+ background-color: white;
+ ">
+ 	This a onclick event.
+ </div>
+ <script type="text/javascript">
+ 	function change(){
+ 		var word = document.getElementById('change');
+ 		word.style.width='150px';
+ 		word.style.height='150px';
+ 		word.style.color='blue';
+ 		word.style.fontSize='20px';
+ 		word.style.background='yellow';
+ 	}
+ </script>
+ <button onclick="change()">change</button>
+</body>
+</html>

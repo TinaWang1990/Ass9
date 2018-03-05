@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+</head>
+
+<body>
+
+<h1>Demo Web Page</h1>
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()">Change</button>
+
+<br><br><hr>
+<h2>Display data using javascript.</h2>
+<ul>
+	<li>Writing into an HTML element, using innerHTML.</li>
+	<li>Writing into the HTML output using document.write().</li>
+	<li>Writing into an alert box, using window.alert().</li>
+	<li>Writing into the browser console, using console.log().</li>
+</ul>
+
+
+
+<script>
+function function_1(){
+	document.getElementById("demo_1").innerHTML = 5 + 6;
+}
+
+function function_2(){
+	document.write(5+6);
+}
+
+function function_3(){
+	window.alert(5 + 6);
+}
+
+function function_4(){
+	console.log(5+6);
+}
+</script>
+
+
+<br><hr>
+<p id="demo_1"></p>
+<button type="button" onclick="function_1()">Calculate 5+6</button>
+
+<br><hr>
+★Using document.write() after an HTML document is fully loaded, will delete all existing HTML★<br>
+<script type="text/javascript">
+	function_2();
+</script>
+<p id="demo_2"></p>
+<button type="button" onclick="function_2()">Calculate 5+6</button>
+
+<br><hr>
+Use alert window to display.<br>
+<button type="button" onclick="function_3()">Calculate 5+6 with alert</button>
+
+<br><hr>
+★For debugging purposes, you can use the console.log() method to display data.★<br>
+<button type="button" onclick="function_4()">Calculate 5+6 to debug console.</button>
+
+<h1>-><script type="text/javascript">document.write(5+6);</script><-</h1>
+
+
+</body>
+</html>
