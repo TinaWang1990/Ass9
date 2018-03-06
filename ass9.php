@@ -34,6 +34,7 @@ echo $pointA->distance();
 
 //2.
 $a = 1111;
+$a=(string)$a;
 if(strlen($a)%3 == 0){
 	$n=strlen($a);
 }else{
@@ -78,8 +79,6 @@ function reverse($nmb){
 	return $new_string;
 }
 echo reverse(23453);
-
-
 
 ?>
 
